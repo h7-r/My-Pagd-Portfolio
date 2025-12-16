@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "KccEunyeong";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+body {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 70%,
+    #f0e7f6 80%,
+    #efdcf7 100%
+  );
+  min-height: 100th;
+}
+
+/* header 탑 */
+.site-header {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "KccEunyeong", sans-serif;
+  color: #772f72;
+  font-weight: bold;
+  text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
+}
+
+/* header title */
+.site-title {
+  font-size: 60px;
+}
+/* header subtitle */
+.site-subtitle {
+  margin-left: 250px;
+  font-size: 50px;
+}
+
+/* -------------------------------------------- */
+
+/* main card */
+.card {
+  padding: 0 15px 0 15px;
+}
+
+/* profile */
+.card.profile {
+  margin-top: 70px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr;
+  gap: 24px;
+  width: 100%;
+}
+/* 모바일 카드나열 */
+@media (max-width: 640px) {
+  .card.profile {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 이미지 들어가는 내정보profile-card */
+.profile-card {
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #f0e4f6;
+  /* 내정보카드 그라데이션 부분 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 50%,
+    #f0e4f6 80%,
+    #efdcf7
+  );
+}
+
+/* profile-img */
+.profile-img {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 180px;
+  /* object-fit: cover; */
+  overflow: hidden;
+}
+/* 모바일 이미지 */
+@media (max-width: 640px) {
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* profile-info 설명란 */
+/* .profile-contact 전체 리스트 */
+/*  profile-contact-list 전체 리스트*/
+/* 각 list content-item */
+.profile-info,
+.profile-contact,
+.profile-contact-list,
+.content-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*profile-info - 이미지 바로 밑 이름이랑 정보란 사이 gap주기위함 */
+.profile-info {
+  gap: 30px;
+}
+
+/* profile-name 이름  */
+.profile-name {
+  font-family: "KccEunyeong", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*  profile-contact-list 전체 리스트*/
+.profile-contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 20px;
+}
+
+/* instargram link 밑에 생긴 a요소 밑줄제거 */
+.profile-contact-list a {
+  text-decoration: none;
+  color: inherit;
+}
