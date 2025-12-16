@@ -10,7 +10,7 @@ body {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   background: linear-gradient(
     to bottom,
     #ffffff 0%,
@@ -18,7 +18,7 @@ body {
     #f0e7f6 80%,
     #efdcf7 100%
   );
-  min-height: 100th;
+  min-height: 100vh;
 }
 
 /* header 탑 */
@@ -41,25 +41,27 @@ body {
 }
 /* header subtitle */
 .site-subtitle {
-  margin-left: 250px;
+  margin: -15px 0 0 280px;
+  /* margin-left: 250px; */
   font-size: 50px;
 }
 
-/* -------------------------------------------- */
-
 /* main card */
 .card {
-  padding: 0 15px 0 15px;
+  padding: 0 18px;
 }
 
+/* ------------------------------------------- */
+
 /* profile */
-.card.profile {
-  margin-top: 70px;
-  height: 400px;
+.profile {
+  margin-top: 20px;
+  width: 100%;
+  height: 430px;
   display: grid;
   grid-template-columns: 1fr 1fr 1.3fr;
   gap: 24px;
-  width: 100%;
+  font-family: "KccEunyeong", sans-serif;
 }
 /* 모바일 카드나열 */
 @media (max-width: 640px) {
@@ -67,10 +69,12 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ---------------------- */
+
+/* profile  */
 
 /* 이미지 들어가는 내정보profile-card */
 .profile-card {
-  /* height: 400px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +92,7 @@ body {
 
 /* profile-img */
 .profile-img {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 100%;
   height: 180px;
   /* object-fit: cover; */
@@ -118,14 +122,14 @@ body {
 
 /*profile-info - 이미지 바로 밑 이름이랑 정보란 사이 gap주기위함 */
 .profile-info {
-  gap: 30px;
+  gap: 18px;
 }
 
 /* profile-name 이름  */
 .profile-name {
-  font-family: "KccEunyeong", sans-serif;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
+  text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
 }
 
 /*  profile-contact-list 전체 리스트*/
@@ -133,11 +137,149 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: 20px;
+  gap: 22px;
+}
+/*content-name 글자크기*/
+.content-name {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+/* content-name a 글자 크기 */
+.content-item a {
+  font-size: 23px;
 }
 
 /* instargram link 밑에 생긴 a요소 밑줄제거 */
 .profile-contact-list a {
   text-decoration: none;
   color: inherit;
+}
+
+/* ------------------------------------- */
+
+/* Aspiring  */
+.aspiring {
+  /* margin-top: 20px; Aspiring 카드만 살짝 작게 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #f0e4f6;
+  /* Aspiring 그라데이션 부분 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 50%,
+    #f0e4f6 80%,
+    #efdcf7
+  );
+  font-family: "KccEunyeong", sans-serif;
+}
+
+/* aspiring-title */
+.aspiring-title {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
+}
+
+/* aspiring-title-desc 글자크기 */
+.aspiring-title-desc {
+  margin-top: 40px;
+  font-size: 27px;
+}
+
+/* .aspiring-title-desc2 글자크기 */
+.aspiring-title-desc2 {
+  margin-top: 20px;
+  font-size: 27px;
+}
+
+/* ------------------------------------- */
+
+/* Career Goals */
+.Goals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #f0e4f6;
+  /* Goals 그라데이션 부분 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 50%,
+    #f0e4f6 80%,
+    #efdcf7
+  );
+  font-family: "KccEunyeong", sans-serif;
+}
+
+/* Goals-item 각제목 설명란 박스사이 갭주기위함 */
+.Goals-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Goals-title */
+.Goals-title {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
+}
+
+/* Goals-list  */
+.Goals-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Goals-list-title 각 단계 먹펴 제목 */
+.Goals-list-title {
+  font-size: 27px;
+}
+
+/* Goals-list-desc 각단계 목표 설명 */
+.Goals-list-desc {
+  font-size: 23px;
+}
+
+/* ------------------------------ */
+
+/* ----- ---What I Bring-------- */
+.Strengths {
+  margin-top: 20px;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-family: "KccEunyeong", sans-serif;
+  border: 2px solid #f0e4f6;
+  /* Strengths 그라데이션 부분 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 50%,
+    #f0e4f6 80%,
+    #efdcf7
+  );
+}
+
+/* Strengths 모바일 화면 */
+@media (max-width: 640px) {
+  .Strengths {
+    width: 100%;
+    margin-left: 0;
+  }
 }
