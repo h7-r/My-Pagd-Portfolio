@@ -43,15 +43,13 @@ body {
   text-shadow: -8px 5px 9px rgba(238, 188, 232, 1);
 }
 
-/* header title */
 .site-title {
-  font-size: 220px;
+  font-size: clamp(110px, 10vw, 160px);
 }
-/* header subtitle */
+
 .site-subtitle {
-  margin: -40px 0 0 740px;
-  /* margin-left: 250px; */
-  font-size: 170px;
+  margin: -40px 0 0 540px;
+  font-size: clamp(80px, 8vw, 130px);
 }
 
 /* main card */
@@ -59,28 +57,19 @@ body {
   padding: 0 30px;
 }
 
-/* ------------------------------------------- */
-
 /* profile */
 .profile {
-  /* margin: 40px 0; */
   width: 100%;
   height: 100%;
-  /* padding: 50px 0; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* grid-auto-rows: 1fr; */
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   font-family: "Cafe24ShiningStar", system-ui, sans-serif;
 }
 
-/* ---------------------- */
-
-/* profile  */
-
-/* 이미지 들어가는 내정보profile-card */
+/* profile-card */
 .profile-card {
-  padding: 20px; /* 칸보다 고양이이미지 사진이 상하좌우 20px 작게 */
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,8 +77,6 @@ body {
   border: 2px solid #f0e4f6;
   border-bottom: 3px solid #eebce8;
   box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-  /* 내정보카드 그라데이션 부분 */
   background: linear-gradient(
     to bottom,
     #ffffff 0%,
@@ -103,15 +90,11 @@ body {
 .profile-img {
   margin-bottom: 5px;
   width: 100%;
-  height: 400px;
-  /* object-fit: cover; */
+  height: 320px;
   overflow: hidden;
 }
 
-/* profile-info 설명란 */
-/* .profile-contact 전체 리스트 */
-/*  profile-contact-list 전체 리스트*/
-/* 각 list content-item */
+/* 공통 flex */
 .profile-info,
 .profile-contact,
 .profile-contact-list,
@@ -122,48 +105,37 @@ body {
   align-items: center;
 }
 
-.profile-info {
-  padding: 50px;
-}
-/*profile-info - 이미지 바로 밑 이름이랑 정보란 사이 gap주기위함 */
-/* .profile-info {
-  gap: 60px;
-} */
-
-/* profile-name 이름  */
 .profile-name {
-  margin-bottom: 80px;
-  font-size: 75px;
+  margin-bottom: 40px;
+  font-size: clamp(56px, 5vw, 72px);
   text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
 }
-
-/*  profile-contact-list 전체 리스트*/
+/* contact list */
 .profile-contact-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
   list-style: none;
-  gap: 30px;
+  gap: 20px;
   font-family: "GowoonDodum", sans-serif;
 }
-/*content-name 글자크기*/
+
 .content-name {
-  font-size: 30px;
+  font-size: clamp(26px, 2.4vw, 32px);
   font-weight: bold;
 }
 
-/* .content-item span a 사이 여백 */
+/* content link */
 .content-item {
   display: flex;
   flex-direction: column;
 }
+
 .content-item a {
-  font-size: 30px;
+  font-size: clamp(22px, 2.2vw, 26px);
   line-height: 1.3;
 }
 
-/* instargram link 밑에 생긴 a요소 밑줄제거 */
+/* link reset */
 .profile-contact-list a {
   text-decoration: none;
   color: inherit;
@@ -174,6 +146,7 @@ body {
 /* Aspiring  */
 .aspiring {
   /* margin-top: 20px; Aspiring 카드만 살짝 작게 */
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,8 +168,8 @@ body {
 
 /* aspiring-title */
 .aspiring-title {
-  padding: 130px 0 70px 0;
-  font-size: 90px;
+  /* padding: 130px 0 70px 0; */
+  font-size: clamp(48px, 6.2vw, 82px);
   text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
 }
 
@@ -209,9 +182,8 @@ body {
 }
 /* aspiring-title-desc 글자크기 */
 .aspiring-title-desc {
-  /* padding: 0 24px; */
   word-break: keep-all;
-  font-size: 32px;
+  font-size: clamp(18px, 2.2vw, 28px);
   line-height: 1.3;
   font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
   filter: drop-shadow(0 1px 4px rgba(34, 129, 69, 0.261))
@@ -222,7 +194,7 @@ body {
 .aspiring-title-desc2 {
   word-break: normal;
   overflow-wrap: break-word;
-  font-size: 35px;
+  font-size: clamp(20px, 2.4vw, 30px);
   font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
   line-height: 1.2;
 }
@@ -260,7 +232,7 @@ body {
 /* Goals-title */
 .goals-title {
   padding: 50px 0 40px 0;
-  font-size: 100px;
+  font-size: clamp(48px, 6vw, 84px);
   text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
 }
 
@@ -275,7 +247,7 @@ body {
 
 /* Goals-list-title 각 단계 목표 제목 */
 .goals-list-title {
-  font-size: 60px;
+  font-size: clamp(32px, 4vw, 56px);
   filter: drop-shadow(0 1px 4px rgba(34, 129, 69, 0.261))
     drop-shadow(0 4px 10px rgba(29, 78, 47, 0.311));
 }
@@ -284,7 +256,7 @@ body {
 .goals-list-desc {
   /* padding-bottom: 90px; */
   font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
-  font-size: 32px;
+  font-size: clamp(18px, 2.2vw, 28px);
   line-height: 1.2;
   word-break: keep-all;
 }
@@ -295,12 +267,12 @@ body {
 .strengths {
   margin-top: 24px; /* 칸사이 여백을 다. 24주기위함 */
   padding: 20px;
-  height: 500px;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   font-family: "Cafe24ShiningStar", system-ui, sans-serif;
   word-break: keep-all;
   border: 2px solid #f0e4f6;
@@ -326,16 +298,15 @@ body {
 /* Strengths-title 폰트크기 */
 .strengths-title {
   padding: 20px;
-  font-size: 90px;
+  font-size: clamp(44px, 5.8vw, 76px);
   text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
 }
 
 /* Strengths-desc 폰트 크기 */
 .strengths-desc {
-  /* margin-top: 40px; */
   text-align: center;
   font-family: "GowoonDodum", sans-serif;
-  font-size: 32px;
+  font-size: clamp(18px, 2.2vw, 28px);
   line-height: 1.3;
   word-break: keep-all;
 }
@@ -346,7 +317,7 @@ body {
 .training-tech {
   margin-top: 24px;
   width: 100%;
-  height: 620px;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 20px;
@@ -359,7 +330,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 30px;
+  gap: 20px;
   border: 2px solid #f0e4f6;
   border-bottom: 3px solid #eebce8;
   box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
@@ -376,8 +347,8 @@ body {
 
 /* training-title 폰트크기 */
 .training-title {
-  padding: 110px 0 30px 0;
-  font-size: 90px;
+  padding: 50px 0 20px 0;
+  font-size: clamp(44px, 5.8vw, 76px);
   text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
 }
 
@@ -398,7 +369,7 @@ body {
 /* bootcamp-subtitle 부트캠프 부제목 폰트크기 */
 .bootcamp-subtitle {
   display: inline-block;
-  font-size: 60px;
+  font-size: clamp(32px, 4vw, 52px);
   font-family: "Cafe24ShiningStar", system-ui, sans-serif;
   filter: drop-shadow(0 1px 4px rgba(6, 87, 36, 0.325))
     drop-shadow(0 4px 10px rgba(18, 78, 40, 0.217));
@@ -409,7 +380,7 @@ body {
 .bootcamp-list-item,
 .bootcamp-period {
   font-family: "GowoonDodum", sans-serif;
-  font-size: 27px;
+  font-size: clamp(16px, 2vw, 24px);
   line-height: 1.3;
 }
 
@@ -438,7 +409,7 @@ body {
 
 /* texhstack 기술 비교 */
 .texhstack {
-  height: 800px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -462,7 +433,7 @@ body {
 /* texhstack-title 기술 제목  */
 .texhstack-title {
   padding-top: 50px;
-  font-size: 90px;
+  font-size: clamp(44px, 5.8vw, 76px);
   font-family: "Cafe24ShiningStar", system-ui, sans-serif;
   text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
 }
@@ -479,7 +450,7 @@ body {
 .texhstack-comparison-item {
   display: flex;
   justify-content: space-between;
-  width: 550px;
+  width: 400px;
 }
 
 /* comparison-item 아이콘 + 글씨 너비 같게 */
@@ -491,7 +462,7 @@ body {
 
 /* comparison-item-title  icon-name 폰트 크기 */
 .comparison-item-title {
-  font-size: 25px;
+  font-size: clamp(16px, 2vw, 22px);
   font-family: "GowoonDodum", sans-serif;
   line-height: 1.3;
 }
@@ -507,9 +478,9 @@ body {
   content: "";
   position: absolute;
   top: 30%;
-  left: 50%;
-  transform: translate(9%, -45%);
-  width: 400px;
+  left: 100%;
+  transform: translate(2%, -45%);
+  width: 240px;
   height: 100%;
   background-image: url("../assets/icon/animation-image.png");
   background-repeat: no-repeat;
@@ -541,9 +512,9 @@ body {
   content: "";
   position: absolute;
   top: 30%;
-  left: 50%;
-  transform: translate(9%, -45%);
-  width: 400px;
+  left: 100%;
+  transform: translate(2%, -45%);
+  width: 240px;
   height: 100%;
   background-image: url("../assets/icon/animation-image.png");
   background-repeat: no-repeat;
@@ -576,9 +547,9 @@ body {
   content: "";
   position: absolute;
   top: 30%;
-  left: 50%;
-  transform: translate(9%, -45%);
-  width: 400px;
+  left: 100%;
+  transform: translate(2%, -45%);
+  width: 240px;
   height: 100%;
   background-image: url("../assets/icon/animation-image.png");
   background-repeat: no-repeat;
@@ -634,15 +605,15 @@ body {
 
 /* 아이콘 이미지 사이즈 통일 */
 .texhstack-item img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
 /* 아이콘 네임 폰트 */
 .texhstack-item-title {
   font-family: "GowoonDodum", sans-serif;
-  font-size: 25px;
+  font-size: clamp(16px, 2vw, 22px);
   text-align: center;
 }
 
@@ -652,7 +623,7 @@ body {
 /* portfolio 테두리 및 영역 */
 .portfolio {
   margin-top: 200px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -679,7 +650,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 90px;
+  font-size: clamp(44px, 5.8vw, 76px);
   text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
   text-align: center;
 }
@@ -709,7 +680,7 @@ body {
 
 /* 각 항목 제목 */
 .portfolio-item-title {
-  font-size: 60px;
+  font-size: clamp(32px, 4vw, 52px);
   display: flex;
   align-items: center;
 }
@@ -718,7 +689,7 @@ body {
 .portfolio-item-desc {
   display: flex;
   font-family: "GowoonDodum", sans-serif;
-  font-size: 25px;
+  font-size: clamp(16px, 2vw, 22px);
   line-height: 1.5;
 }
 /* --------------------------------- */
@@ -742,1367 +713,332 @@ body {
 }
 
 /* ------------------------------------------------------------ *
-미디어 쿼리 : max-width:768px
-/* ---------------------------------------------------------------------/ */
-
+미디어 : max-width:768px */
 @media (max-width: 768px) {
-  /* header 탑 */
   .site-header {
-    padding: 40px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    /* font-family: "Kaushan Script", cursive; */
-    color: #772f72;
-    font-weight: bold;
-    text-shadow: -8px 5px 9px rgba(238, 188, 232, 1);
+    padding: 60px 20px;
+    text-align: center;
   }
 
-  /* header title */
+  .site-header h2,
+  .site-header h3 {
+    text-align: center;
+    margin-left: 0;
+  }
   .site-title {
-    font-size: 150px;
+    font-size: clamp(72px, 10vw, 120px);
   }
-  /* header subtitle */
+
   .site-subtitle {
-    margin: -25px 0 0 350px;
-    /* margin-left: 250px; */
-    font-size: 100px;
+    font-size: clamp(36px, 6vw, 60px);
+    margin: -10px 0 0;
+    text-align: center;
   }
 
-  /* main card */
   .card {
-    padding: 0 24px;
+    padding: 0 15px;
   }
 
-  /* profile */
   .profile {
-    width: 100%;
-    padding: 10px 30px 0 30px;
-    /* height: 100%; */
-    /* padding: 50px 0; */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    gap: 20px; /* 카드 3개 사이 여백 */
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-  }
-
-  /* ---------------------- */
-
-  /* profile  */
-
-  /* 이미지 들어가는 내정보profile-card */
-  .profile-card {
-    padding: 25px; /* 칸보다 고양이이미지 사진이 상하좌우 20px 작게 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* 내정보카드 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-
-  /* profile-img */
-  .profile-img {
-    /* margin-bottom: 5px; */
-    width: 100%;
-    height: 450px;
-    /* object-fit: cover; */
-    overflow: hidden;
-  }
-
-  /* profile-info 설명란 */
-  /* .profile-contact 전체 리스트 */
-  /*  profile-contact-list 전체 리스트*/
-  /* 각 list content-item */
-  .profile-info,
-  .profile-contact,
-  .profile-contact-list,
-  .content-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .profile-info {
-    padding: 20px;
-  }
-
-  /* profile-name 이름  */
-  .profile-name {
-    margin-bottom: 50px;
-    font-size: 110px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  /*  profile-contact-list 전체 리스트*/
-  .profile-contact-list {
-    margin: 0;
+    gap: 15px;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 30px;
-    font-family: "GowoonDodum", sans-serif;
+    justify-items: center;
   }
-  /*content-name 글자크기*/
-  .content-name {
-    font-size: 40px;
-    font-weight: bold;
-  }
-
-  /* .content-item span a 사이 여백 */
-  .content-item {
-    display: flex;
-    flex-direction: column;
-  }
-  .content-item a {
-    font-size: 35px;
-    line-height: 1.3;
-  }
-
-  /* instargram link 밑에 생긴 a요소 밑줄제거 */
-  .profile-contact-list a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  /* ------------------------------------------------------- */
-
-  /* Aspiring  */
-  .aspiring {
-    /* margin-top: 20px; Aspiring 카드만 살짝 작게 */
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* Aspiring 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-    /* font-family: "Kaushan Script", cursive; */
-  }
-
-  /* aspiring-title */
-  .aspiring-title {
-    padding: 35px 0 70px 0;
-    font-size: 110px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  .aspiring-highlight {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    line-height: 1.3;
-  }
-  /* aspiring-title-desc 글자크기 */
-  .aspiring-title-desc {
-    /* padding: 0 24px; */
-    word-break: keep-all;
-    font-size: 35px;
-    line-height: 1.3;
-    font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
-    filter: drop-shadow(0 1px 4px rgba(34, 129, 69, 0.261))
-      drop-shadow(0 4px 10px rgba(29, 78, 47, 0.311));
-  }
-
-  /* .aspiring-title-desc2 글자크기 */
-  .aspiring-title-desc2 {
-    padding-bottom: 30px;
-    word-break: normal;
-    overflow-wrap: break-word;
-    font-size: 37px;
-    font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
-    line-height: 1.2;
-  }
-
-  /* ----------------------------------------------------------- */
-
-  /* Career Goals */
-  .goals {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* Goals 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-
-  /* Goals-item 각제목 설명란 박스사이 갭주기위함 */
-  .goals-item {
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Goals-title */
-  .goals-title {
-    padding: 35px 0 70px 0;
-    font-size: 110px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  /* Goals-list  */
-  .goals-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  /* Goals-list-title 각 단계 목표 제목 */
-  .goals-list-title {
-    font-size: 70px;
-    filter: drop-shadow(0 1px 4px rgba(34, 129, 69, 0.261))
-      drop-shadow(0 4px 10px rgba(29, 78, 47, 0.311));
-  }
-
-  /* Goals-list-desc 각단계 목표 설명 */
-  .goals-list-desc {
-    /* padding-bottom: 90px; */
-    font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
-    font-size: 35px;
-    line-height: 1.3;
-    word-break: keep-all;
-  }
-
-  .goals-list-desc p:last-child {
-    padding-bottom: 10px;
-  }
-
-  /* What I Bring----------------------------- */
-  .strengths {
-    margin: 20px 30px 0 30px;
-    padding: 25px;
-    width: 660px;
-    height: 1050px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* gap: 40px; */
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    word-break: keep-all;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* Strengths 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-  /* point-text 부분 폰트 포인트 */
-  .point-text {
-    vertical-align: baseline;
-    filter: drop-shadow(0 1px 4px rgba(6, 87, 36, 0.325))
-      drop-shadow(0 4px 10px rgba(18, 78, 40, 0.217));
-  }
-
-  /* Strengths-title 폰트크기 */
-  .strengths-title {
-    padding: 30px 0 70px 0;
-    font-size: 110px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  /* Strengths-desc 폰트 크기 */
-  .strengths-desc {
-    text-align: center;
-    font-family: "GowoonDodum", sans-serif;
-    font-size: 35px;
-    line-height: 1.5;
-    word-break: keep-all;
-  }
-
-  /* ------------------------------------------------------- */
-
-  /*Training Profram */
-  .training-tech {
-    margin: 20px 30px 0 30px;
-    width: 660px;
-    height: 665px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
-    gap: 20px;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-  }
-
-  /* training-tech */
-  .training {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* training-tech 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-
-  /* training-title 폰트크기 */
-  .training-title {
-    padding: 35px 0 40px 0;
-    font-size: 110px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  /* bootcamp 오르미과정과 리스트 사이 여백 */
-  .bootcamp {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  /* bootcamp header 이스트캠프 사이 여백 .bootcamp-header */
-  .bootcamp-header {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  /* bootcamp-subtitle 부트캠프 부제목 폰트크기 */
-  .bootcamp-subtitle {
-    display: inline-block;
-    font-size: 70px;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    filter: drop-shadow(0 1px 4px rgba(6, 87, 36, 0.325))
-      drop-shadow(0 4px 10px rgba(18, 78, 40, 0.217));
-  }
-
-  /* bootcamp-name 외 list-item bootcamp기간 폰트크기 */
-  .bootcamp-name,
-  .bootcamp-list-item,
-  .bootcamp-period {
-    font-family: "GowoonDodum", sans-serif;
-    font-size: 35px;
-    line-height: 1.3;
-  }
-
-  .bootcamp-skil-list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  /* bootcamp-list-item 배우는 항목 폰트강조 */
-  .bootcamp-list-item {
-    font-weight: bold;
-    filter: drop-shadow(0 1px 4px rgba(34, 129, 69, 0.261))
-      drop-shadow(0 4px 10px rgba(29, 78, 47, 0.311));
-  }
-
-  /* bootcamp-period 기간 가로 정렬 */
-  .bootcamp-period {
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  /* ------------------------------------------------------- */
-
-  /* texhstack 기술  */
-  .texhstack {
-    padding: 25px;
-    width: 660px;
-    height: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    text-align: center;
-    font-family: "GowoonDodum", sans-serif;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* texhstack 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-
-  /* texhstack-title 기술 제목  */
-  .texhstack-title {
-    font-size: 110px;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  /* texhstack-comparison-lists icon 전체 */
-  .texhstack-comparison-lists {
-    padding-top: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  /* texhstack-comparison-item 각 아이콘 2개씩 묶어서 총 3개 */
-  .texhstack-comparison-item {
-    display: flex;
-    justify-content: space-between;
-    width: 550px;
-  }
-
-  /* comparison-item 아이콘 + 글씨 너비 같게 */
-  .comparison-item {
-    position: relative;
-    width: 78px;
-    height: 93px;
-  }
-
-  /* comparison-item-title  icon-name 폰트 크기 */
-  .comparison-item-title {
-    font-size: 25px;
-    font-family: "GowoonDodum", sans-serif;
-    line-height: 1.3;
-  }
-
-  /* --------------가상요소 ---------------*/
-  /* html + css  가상요소 */
-  .texhstack-html-css {
-    position: relative; /* 가상요소 기준 */
-  }
-
-  /* html 아이콘 다음으로 이미지 넣기위해 */
-  .html-css::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(9%, -45%);
-    width: 400px;
-    height: 100%;
-    background-image: url("../assets/icon/animation-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: all 0.5s ease;
-  }
-
-  /* hover 이미지 */
-  .html-css:hover::after {
-    background-image: url("../assets/icon/html-css-hover.png");
-    opacity: 1;
-  }
-
-  /* 클릭 이미지 */
-  .html-css:active::after {
-    background-image: url("../assets/icon/html-css-click.png");
-    opacity: 1;
-  }
-
-  /* ----------- */
-  /* javascript + jquery  가상요소 ---- */
-  .texhstack-java-jquery {
-    position: relative;
-  }
-
-  /* java 아이콘 다음으로 이미지 넣기위해 */
-  .java-jquery::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(9%, -45%);
-    width: 400px;
-    height: 100%;
-    background-image: url("../assets/icon/animation-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: all 0.5s ease;
-  }
-
-  /* hover 이미지 */
-  .java-jquery:hover::after {
-    background-image: url("../assets/icon/java-jquery-hover.png");
-    opacity: 1;
-  }
-
-  /* 클릭 이미지 */
-  .java-jquery:active:after {
-    background-image: url("../assets/icon/js-jquery-click.png");
-    opacity: 1;
-  }
-
-  /* --------------------- */
-  /* Tailwind 아이콘 다음으로 이미지 넣기 위해 */
-  /* tailwindcss - bootstrap  가상요소 ---- */
-  .texhstack-tailw-boots {
-    position: relative;
-  }
-
-  /* Tailwind 아이콘 다음으로 이미지 넣기 위해 */
-  .tailw-boots::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(9%, -45%);
-    width: 400px;
-    height: 100%;
-    background-image: url("../assets/icon/animation-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: all 0.5s ease;
-  }
-
-  /* hover 이미지 */
-  .tailw-boots:hover::after {
-    background-image: url("../assets/icon/tailw-boot-hover.png");
-    opacity: 1;
-  }
-
-  /* 클릭 이미지 */
-  .tailw-boots:active:after {
-    background-image: url("../assets/icon/twil-bt-click.png");
-    opacity: 1;
-  }
-
-  /* ---- texhstack-icon 할수있는 기술 ---------- */
-
-  /* 아이콘 칸 */
-  .texhstack-icon-lists {
-    padding: 10px 0;
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
-    column-gap: 100px;
-    row-gap: 40px;
-    justify-content: center;
-  }
-
-  /* texhstack-icon-item 아이콘 정렬 */
-  .texhstack-icon-item {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* 아래 notion codepan 아이템만 오른쪽으로 ------------
-이동시켜 위에 아이템 사이에 들어가기 위해 */
-  .texhstack-icon-item:nth-child(even) {
-    transform: translateX(80px);
-  }
-
-  /* texhstack-item 아이콘 텍스트 사이 여백및 정렬 */
-  .texhstack-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
-
-  /* 아이콘 이미지 사이즈 통일 */
-  .texhstack-item img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-  }
-
-  /* 아이콘 네임 폰트 */
-  .texhstack-item-title {
-    font-family: "GowoonDodum", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
-
-  /*  Portfolio-------------------- ---------------------- */
-  /* portfolio 테두리 및 영역 */
-  .portfolio {
-    margin-top: 1060px;
-    margin-left: 30px;
-    padding: 20px;
-    /* padding-bottom: 50px; */
-    width: 660px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* portfolio 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-
-  /* portfolio-title 제목 폰트 크기 */
-  .portfolio-title {
-    padding: 40px 0 70px 0;
-    /* padding-bottom: 40px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-    text-align: center;
-  }
-
-  /* portfolio-lists ssg kakao 정렬 */
-  .portfolio-lists {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    /* align-items: center; */
-    /* padding: 0 25px; */
-  }
-
-  /* --------- 이미지 크기 ---------- */ /* svg ing 크기 */
-  .portfolio-item img {
-    margin-top: 10px;
-    width: 610px;
-    height: 300px;
-  }
-
-  /* kakao img 크기 */
-  .portfolio-kakao-item img {
-    margin-top: 10px;
-    width: 500px;
-    height: 300px;
-  }
-
-  /* 각 항목 제목 */
-  .portfolio-item-title {
-    font-size: 55px;
-    display: flex;
-    /* align-items: center; */
-  }
-
-  /* portfolio-item-desc 항목 설명란 폰트크기 */
-  .portfolio-item-desc {
-    padding: 10px;
-    display: flex;
-    font-family: "GowoonDodum", sans-serif;
-    font-size: 25px;
-    line-height: 1.3;
-  }
-  .portfolio-kakao-item {
-    margin-right: 110px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* footer ----------------------------------------------------  */
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .social-icons-lists {
-    margin: 30px 0;
-
-    display: flex;
-    gap: 70px;
-  }
-
-  .social-icons-item img {
-    width: 30px;
-  }
-}
-/* ------------------------------------------------------------ *
-모바일 : max-width:375px
-/* ---------------------------------------------------------------------/ */
-
-@media screen and (max-width: 375px) {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  /* header 탑 */
-  .site-header {
-    padding: 50px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    /* font-family: "Kaushan Script", cursive; */
-    color: #772f72;
-    font-weight: bold;
-    text-shadow: -8px 5px 9px rgba(238, 188, 232, 1);
-  }
-
-  /* header title */
-  .site-title {
-    font-size: 80px;
-    line-height: 1.1;
-  }
-  /* header subtitle */
-  .site-subtitle {
-    margin: -12px 0 0 0px;
-    /* margin-left: 250px; */
-    font-size: 66px;
-  }
-
-  /* main card */
-  .card {
-    width: 100%;
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-
-  /* profile */
-  .profile {
-    width: 100%;
-    padding: 0px;
-    /* height: 100%; */
-    /* padding: 50px 0; */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    gap: 10px; /* 카드 3개 사이 여백 */
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-  }
-
-  /* ---------------------- */
-
-  /* profile  */
 
-  /* 이미지 들어가는 내정보profile-card */
   .profile-card {
+    width: 90%;
+    height: 90%;
+    padding: 15px;
+    box-sizing: border-box;
     margin: 0;
-    width: 100%;
-    min-width: 335px;
-    padding: 10px; /* 칸보다 고양이이미지 사진이 상하좌우 20px 작게 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* text-align: center; */
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* 내정보카드 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
   }
 
-  /* profile-img */
   .profile-img {
-    /* margin-bottom: 5px; */
     width: 100%;
-    min-width: 300px;
-    height: auto;
-    object-fit: cover;
-    /* overflow: hidden; */
-    display: block;
-  }
-
-  /* profile-info 설명란 */
-  /* .profile-contact 전체 리스트 */
-  /*  profile-contact-list 전체 리스트*/
-  /* 각 list content-item */
-  .profile-info,
-  .profile-contact,
-  .profile-contact-list,
-  .content-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 50%;
   }
 
   .profile-info {
-    padding: 10px;
+    padding-top: 30px;
   }
 
-  /* profile-name 이름  */
   .profile-name {
     margin-bottom: 20px;
-    font-size: 60px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
+    font-size: clamp(44px, 5vw, 64px);
   }
 
-  /*  profile-contact-list 전체 리스트*/
   .profile-contact-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 17px;
-    font-family: "GowoonDodum", sans-serif;
-  }
-  /*content-name 글자크기*/
-  .content-name {
-    font-size: 24px;
-    font-weight: bold;
+    gap: 10px;
   }
 
-  /* .content-item span a 사이 여백 */
-  .content-item {
-    display: flex;
-    flex-direction: column;
-  }
   .content-item a {
-    font-size: 16px;
-    line-height: 1.3;
+    font-size: clamp(16px, 2.5vw, 22px);
   }
 
-  /* instargram link 밑에 생긴 a요소 밑줄제거 */
-  .profile-contact-list a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  /* ------------------------------------------------------- */
-
-  /* Aspiring  */
   .aspiring {
-    /* margin-top: 20px; Aspiring 카드만 살짝 작게 */
-    padding: 10px;
+    width: 90%; /* 카드 넓이 */
+    padding: 2rem 1rem; /* 위/아래 2rem, 좌/우 1rem */
+    box-sizing: border-box; /* 패딩 포함해서 넓이 계산 */
+    min-height: 200px; /* 최소 높이 보장 */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
+    gap: 1rem;
+  }
+}
 
-    /* Aspiring 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-    /* font-family: "Kaushan Script", cursive; */
+.aspiring-title {
+  padding: 15px 0 30px 0;
+  font-size: clamp(40px, 5vw, 56px);
+}
+
+.aspiring-highlight {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0;
+}
+
+.aspiring-title-desc,
+.aspiring-title-desc2 {
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.goals {
+  padding: 0 15px;
+  width: 90%;
+  margin: 0 auto 15px;
+}
+
+.goals-title {
+  padding: 40px 0 30px 0;
+  font-size: clamp(40px, 5vw, 56px);
+}
+
+.goals-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0;
+}
+
+.goals-list-title {
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.goals-list-desc {
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.strengths {
+  padding: 0 15px;
+  width: 90%;
+  margin: 0 auto 15px;
+}
+
+.strengths-title {
+  padding-right: 25px;
+  font-size: clamp(40px, 5vw, 56px);
+}
+
+.strengths-desc {
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.training {
+  padding: 0 15px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto 15px;
+}
+
+.training-title {
+  padding-top: 30px;
+  font-size: clamp(40px, 5vw, 56px);
+}
+
+.training-tech {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0;
+}
+.bootcamp-period {
+  padding-bottom: 5%;
+}
+
+.texhstack {
+  padding: 0 15px;
+  width: 90%;
+  margin: 0 auto 15px;
+}
+
+.texhstack-title {
+  padding-top: 40px;
+  font-size: clamp(40px, 5vw, 56px);
+}
+
+.texhstack-icon-lists {
+  column-gap: 50px;
+  row-gap: 25px;
+  justify-items: center;
+}
+
+.texhstack-item img {
+  width: 80%;
+  height: 80%;
+}
+
+.texhstack-item-title {
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.portfolio {
+  padding: 0 15px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto 15px;
+}
+s .portfolio-title {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: clamp(44px, 6vw, 64px);
+}
+
+.portfolio-lists {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0;
+  justify-items: start;
+}
+
+.portfolio-item img {
+  width: 85%;
+  height: auto;
+  display: block;
+  margin-left: 0;
+}
+
+.portfolio-kakao-item img {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin-left: 0;
+}
+
+.portfolio-item-title {
+  font-size: clamp(28px, 4vw, 36px);
+}
+
+.portfolio-item-desc {
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+
+/* ---------------- Mobile (max-width: 375px) ---------------- */
+@media (max-width: 375px) {
+  /* 사이트 헤더 */
+  .site-header {
+    padding: 50px 10px;
   }
 
-  /* aspiring-title */
-  .aspiring-title {
-    padding: 10px 0 20px 0;
-    font-size: 42px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
+  .site-title {
+    font-size: clamp(56px, 14vw, 72px);
   }
 
-  .aspiring-highlight {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    line-height: 1.3;
-  }
-  /* aspiring-title-desc 글자크기 */
-  .aspiring-title-desc {
-    /* padding: 0 24px; */
-    word-break: keep-all;
-    font-size: 12px;
-    line-height: 1.3;
-    font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
-    filter: drop-shadow(0 1px 4px rgba(34, 129, 69, 0.261))
-      drop-shadow(0 4px 10px rgba(29, 78, 47, 0.311));
+  .site-subtitle {
+    font-size: clamp(28px, 8vw, 40px);
+    margin: -0.3em 0 0;
   }
 
-  /* .aspiring-title-desc2 글자크기 */
-  .aspiring-title-desc2 {
-    padding-bottom: 10px;
-    word-break: normal;
-    overflow-wrap: break-word;
-    font-size: 12px;
-    font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
-    line-height: 1.3;
-  }
-  /* ------------------------------------------------------- */
-
-  /* Career Goals */
-  .goals {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* Goals 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-
-  /* Goals-item 각제목 설명란 박스사이 갭주기위함 */
-  .goals-item {
-    padding-bottom: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  /* Goals-title */
-  .goals-title {
-    padding: 10px 0 20px 0;
-    font-size: 42px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  /* Goals-list  */
-  .goals-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  /* Goals-list-title 각 단계 목표 제목 */
-  .goals-list-title {
-    font-size: 30px;
-    filter: drop-shadow(0 1px 4px rgba(34, 129, 69, 0.261))
-      drop-shadow(0 4px 10px rgba(29, 78, 47, 0.311));
-  }
-
-  /* Goals-list-desc 각단계 목표 설명 */
-  .goals-list-desc {
-    /* padding-bottom: 90px; */
-    font-family: "GowoonDodum", "IBM Plex Sans KR", sans-serif;
-    font-size: 12px;
-    line-height: 1.3;
-    word-break: keep-all;
-  }
-
-  .goals-list-desc p:last-child {
-    padding-bottom: 10px;
-  }
-  /* --------------------------------------------------------------- */
-  /* What I Bring----------------------------- */
-  .strengths {
-    margin-top: 10;
-    margin-left: 1px;
-    padding: 10px;
-    width: 100%;
-    min-width: 335px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    word-break: keep-all;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* Strengths 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-  /* point-text 부분 폰트 포인트 */
-  .point-text {
-    vertical-align: baseline;
-    filter: drop-shadow(0 1px 4px rgba(6, 87, 36, 0.325))
-      drop-shadow(0 4px 10px rgba(18, 78, 40, 0.217));
-  }
-
-  /* Strengths-title 폰트크기 */
-  .strengths-title {
-    padding: 10px 0 20px 0;
-    font-size: 42px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  /* Strengths-desc 폰트 크기 */
-  .strengths-desc {
-    text-align: center;
-    font-family: "GowoonDodum", sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
-    word-break: keep-all;
-  }
-
-  /* ------------------------------------------------------- */
-
-  /*Training Profram */
-  .training-tech {
-    margin: 0;
-    width: 100%;
-    min-width: 335px;
-    height: 665px;
-    display: grid;
+  /* 프로필 */
+  .profile {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
+    gap: 20px;
+    padding: 0 10px;
+    justify-items: center;
   }
 
-  /* training-tech */
-  .training {
+  .profile-card {
+    width: 350px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* training-tech 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
   }
 
-  /* training-title 폰트크기 */
-  .training-title {
-    padding: 10px 0 20px 0;
-    font-size: 42px;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
+  .profile-img {
+    width: 90%;
+    height: auto;
   }
 
-  /* bootcamp 오르미과정과 리스트 사이 여백 */
-  .bootcamp {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  /* 포트폴리오 리스트 */
+  .portfolio-lists {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+    justify-items: start;
   }
 
-  /* bootcamp header 이스트캠프 사이 여백 .bootcamp-header */
-  .bootcamp-header {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
+  .portfolio-item,
+  .portfolio-kakao-item {
+    width: 350px;
+    padding: 10px;
   }
 
-  /* bootcamp-subtitle 부트캠프 부제목 폰트크기 */
-  .bootcamp-subtitle {
-    display: inline-block;
-    font-size: 70px;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    filter: drop-shadow(0 1px 4px rgba(6, 87, 36, 0.325))
-      drop-shadow(0 4px 10px rgba(18, 78, 40, 0.217));
+  .portfolio-item img,
+  .portfolio-kakao-item img {
+    width: calc(100% - 20px);
+    height: auto;
   }
 
-  /* bootcamp-name 외 list-item bootcamp기간 폰트크기 */
-  .bootcamp-name,
-  .bootcamp-list-item,
-  .bootcamp-period {
-    font-family: "GowoonDodum", sans-serif;
-    font-size: 35px;
-    line-height: 1.3;
+  /* Aspiring / Goals / Strengths / Training / Tech Stack */
+  .aspiring-highlight,
+  .goals-list,
+  .strengths,
+  .training-tech {
+    gap: 15px;
+    padding: 0 10px;
   }
 
-  .bootcamp-skil-list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  /* bootcamp-list-item 배우는 항목 폰트강조 */
-  .bootcamp-list-item {
-    font-weight: bold;
-    filter: drop-shadow(0 1px 4px rgba(34, 129, 69, 0.261))
-      drop-shadow(0 4px 10px rgba(29, 78, 47, 0.311));
-  }
-
-  /* bootcamp-period 기간 가로 정렬 */
-  .bootcamp-period {
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  /* ------------------------------------------------------- */
-
-  /* texhstack 기술  */
-  .texhstack {
-    padding: 25px;
-    width: 660px;
-    height: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    text-align: center;
-    font-family: "GowoonDodum", sans-serif;
-    border: 2px solid #f0e4f6;
-    border-bottom: 3px solid #eebce8;
-    box-shadow: 0 5px 10px rgba(222, 85, 213, 0.35);
-
-    /* texhstack 그라데이션 부분 */
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #ffffff 50%,
-      #f0e4f6 80%,
-      #efdcf7
-    );
-  }
-
-  /* texhstack-title 기술 제목  */
-  .texhstack-title {
-    font-size: 110px;
-    font-family: "Cafe24ShiningStar", system-ui, sans-serif;
-    text-shadow: -3px 2px 4px rgba(119, 47, 114, 0.6);
-  }
-
-  /* texhstack-comparison-lists icon 전체 */
-  .texhstack-comparison-lists {
-    padding-top: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  /* texhstack-comparison-item 각 아이콘 2개씩 묶어서 총 3개 */
-  .texhstack-comparison-item {
-    display: flex;
-    justify-content: space-between;
-    width: 550px;
-  }
-
-  /* comparison-item 아이콘 + 글씨 너비 같게 */
-  .comparison-item {
-    position: relative;
-    width: 78px;
-    height: 93px;
-  }
-
-  /* comparison-item-title  icon-name 폰트 크기 */
-  .comparison-item-title {
-    font-size: 25px;
-    font-family: "GowoonDodum", sans-serif;
-    line-height: 1.3;
-  }
-
-  /* --------------가상요소 ---------------*/
-  /* html + css  가상요소 */
-  .texhstack-html-css {
-    position: relative; /* 가상요소 기준 */
-  }
-
-  /* html 아이콘 다음으로 이미지 넣기위해 */
-  .html-css::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(9%, -45%);
-    width: 400px;
-    height: 100%;
-    background-image: url("../assets/icon/animation-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: all 0.5s ease;
-  }
-
-  /* hover 이미지 */
-  .html-css:hover::after {
-    background-image: url("../assets/icon/html-css-hover.png");
-    opacity: 1;
-  }
-
-  /* 클릭 이미지 */
-  .html-css:active::after {
-    background-image: url("../assets/icon/html-css-click.png");
-    opacity: 1;
-  }
-
-  /* ----------- */
-  /* javascript + jquery  가상요소 ---- */
-  .texhstack-java-jquery {
-    position: relative;
-  }
-
-  /* java 아이콘 다음으로 이미지 넣기위해 */
-  .java-jquery::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(9%, -45%);
-    width: 400px;
-    height: 100%;
-    background-image: url("../assets/icon/animation-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: all 0.5s ease;
-  }
-
-  /* hover 이미지 */
-  .java-jquery:hover::after {
-    background-image: url("../assets/icon/java-jquery-hover.png");
-    opacity: 1;
-  }
-
-  /* 클릭 이미지 */
-  .java-jquery:active:after {
-    background-image: url("../assets/icon/js-jquery-click.png");
-    opacity: 1;
-  }
-
-  /* --------------------- */
-  /* Tailwind 아이콘 다음으로 이미지 넣기 위해 */
-  /* tailwindcss - bootstrap  가상요소 ---- */
-  .texhstack-tailw-boots {
-    position: relative;
-  }
-
-  /* Tailwind 아이콘 다음으로 이미지 넣기 위해 */
-  .tailw-boots::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(9%, -45%);
-    width: 400px;
-    height: 100%;
-    background-image: url("../assets/icon/animation-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: all 0.5s ease;
-  }
-
-  /* hover 이미지 */
-  .tailw-boots:hover::after {
-    background-image: url("../assets/icon/tailw-boot-hover.png");
-    opacity: 1;
-  }
-
-  /* 클릭 이미지 */
-  .tailw-boots:active:after {
-    background-image: url("../assets/icon/twil-bt-click.png");
-    opacity: 1;
-  }
-
-  /* ---- texhstack-icon 할수있는 기술 ---------- */
-
-  /* 아이콘 칸 */
   .texhstack-icon-lists {
-    padding: 10px 0;
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
-    column-gap: 100px;
-    row-gap: 40px;
-    justify-content: center;
+    column-gap: 40px;
+    row-gap: 20px;
   }
 
-  /* texhstack-icon-item 아이콘 정렬 */
-  .texhstack-icon-item {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* 아래 notion codepan 아이템만 오른쪽으로 ------------
-이동시켜 위에 아이템 사이에 들어가기 위해 */
-  .texhstack-icon-item:nth-child(even) {
-    transform: translateX(80px);
-  }
-
-  /* texhstack-item 아이콘 텍스트 사이 여백및 정렬 */
-  .texhstack-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
-
-  /* 아이콘 이미지 사이즈 통일 */
   .texhstack-item img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+    width: 35px;
+    height: 35px;
   }
 
-  /* 아이콘 네임 폰트 */
   .texhstack-item-title {
-    font-family: "GowoonDodum", sans-serif;
-    font-size: 25px;
-    text-align: center;
+    font-size: clamp(14px, 4vw, 20px);
   }
 
-  /* ----------------------------------------------------------- */
+  /* 글자 크기 */
+  .portfolio-title {
+    font-size: clamp(40px, 8vw, 52px);
+  }
+
+  .portfolio-item-title {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .aspiring-title,
+  .goals-title,
+  .strengths-title,
+  .training-title,
+  .texhstack-title {
+    font-size: clamp(40px, 8vw, 52px);
+  }
+
+  /* Profile contact / description */
+  .profile-contact-list {
+    gap: 15px;
+  }
+
+  .content-item a,
+  .aspiring-title-desc,
+  .aspiring-title-desc2,
+  .goals-list-desc,
+  .strengths-desc {
+    font-size: clamp(16px, 4vw, 22px);
+  }
 }
