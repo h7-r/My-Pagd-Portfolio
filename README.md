@@ -21,3 +21,7 @@ PC · 태블릿 · 모바일 환경에서
 단순한 구현이 아니라  
 **왜 이렇게 설계했는지, 사용자가 어떻게 느낄지를 고민하는 과정**을  
 보여주고자 했습니다.
+
+[LeeHaerang_RESUME.pdf](https://github.com/user-attachments/files/24249316/LeeHaerang_RESUME.pdf)
+
+
