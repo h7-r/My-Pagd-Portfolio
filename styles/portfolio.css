@@ -2,11 +2,14 @@ body {
   font-family: "GowoonDodum", "Cafe24ShiningStar", sans-serif;
   max-width: 1280px;
   margin: 0 auto;
-  background: linear-gradient(to bottom, #c6e2b2 0%, #e0f0d9 100%);
+  background: linear-gradient(to right, #f2fbbc, #c6de9c);
   color: #000;
   line-height: 1.6;
 }
 
+.card {
+  margin: 0 auto;
+}
 /* header, main, footer */
 header,
 main,
@@ -20,7 +23,7 @@ footer {
 .site-header {
   text-align: center;
   padding: 40px 20px;
-  background: #c6e2b2;
+  background: #e6ffd5;
 }
 
 .site-title {
@@ -59,7 +62,7 @@ footer {
 }
 
 /* ---- Profile Image (이미지 변경 + 회전 + 연한 녹색 그림자) ---- */
-.profile-image {
+.profile-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -68,11 +71,16 @@ footer {
   transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-.profile-image:hover {
+.profile-img:hover {
   transform: rotate(360deg);
   content: url("../assets/icon/cat2-img.png");
   /* 그림자 효과 */
   box-shadow: 0 0 30px 10px rgba(42, 122, 45, 0.3);
+}
+
+.profile-img:active {
+  transform: scale(1.5);
+  box-shadow: 0 0 30px 10px rgba(10, 180, 14, 0.445);
 }
 
 /* ---- Profile Info ---- */
@@ -148,7 +156,7 @@ footer {
   background: #f5f0e1;
   padding: 50px;
   border-radius: 20px;
-  margin: 50px auto;
+  /* margin: 30px auto; */
   max-width: 800px;
   color: #000;
   border-bottom: 2px solid #2a7a2d;
